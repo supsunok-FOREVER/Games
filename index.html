@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почему так названы? - Интеллектуальная игра</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Игровой интерфейс -->
+    <div class="game-container">
+        <!-- Хедер игры -->
+        <header class="game-header">
+            <div class="game-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 10%"></div>
+                </div>
+                <span class="progress-text">Вопрос 1 из 10</span>
+            </div>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">Счет:</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Время:</span>
+                    <span class="stat-value" id="timer">60</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Основной игровой контент -->
+        <main class="game-content">
+            <!-- Вопрос -->
+            <section class="question-section">
+                <h1 class="question-title">Почему так названы?</h1>
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Вопрос #1</span>
+                        <span class="question-category">История КВН</span>
+                    </div>
+                    <div class="question-content">
+                        <h2>Команда "Вилки и розетки"</h2>
+                        <p>Почему знаменитая команда КВН из Тбилиси получила такое необычное название?</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Варианты ответов -->
+            <section class="answers-section">
+                <div class="answers-grid">
+                    <button class="answer-option" data-correct="false">
+                        <span class="option-letter">А</span>
+                        <span class="option-text">Потому что участники постоянно спорили как вилки в розетки</span>
+                    </button>
+                    
+                    <button class="answer-option" data-correct="true">
+                        <span class="option-letter">Б</span>
+                        <span class="option-text">Участники были студентами энергетического института</span>
+                    </button>
+                    
+                    <button class="answer-option" data-correct="false">
+                        <span class="option-letter">В</span>
+                        <span class="option-text">Это был рекламный проект производителя электротоваров</span>
+                    </button>
+                    
+                    <button class="answer-option" data-correct="false">
+                        <span class="option-letter">Г</span>
+                        <span class="option-text">Название придумали из-за любви к технике</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Кнопка подтверждения -->
+            <div class="action-section">
+                <button class="submit-btn" id="submitAnswer" disabled>
+                    Подтвердить ответ
+                </button>
+            </div>
+        </main>
+
+        <!-- Результат и объяснение -->
+        <section class="result-section hidden">
+            <div class="result-card">
+                <div class="result-header">
+                    <span class="result-icon" id="resultIcon">🎉</span>
+                    <h3 id="resultTitle">Правильно!</h3>
+                </div>
+                <div class="result-content">
+                    <div class="explanation">
+                        <h4>Историческая справка:</h4>
+                        <p>Команда КВН "Вилки и розетки" была создана в <strong>Тбилисском институте инженеров железнодорожного транспорта</strong>. 
+                        Название отражало энергетическую и электротехническую направленность вуза, где учились участники команды.</p>
+                        
+                        <div class="fun-fact">
+                            <span class="fact-icon">💡</span>
+                            <p><strong>Интересный факт:</strong> Команда стала чемпионом Высшей лиги КВН в 1967 году и запомнилась зрителям своим уникальным грузинским юмором.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="next-action">
+                        <button class="next-btn" id="nextQuestion">
+                            Следующий вопрос →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Футер с дополнительной информацией -->
+    <footer class="game-footer">
+        <div class="footer-content">
+            <div class="game-info">
+                <span>Интеллектуальная игра "Почему так названы?"</span>
+                <span>Разработано с ♥ для любителей истории</span>
+            </div>
+            <div class="social-links">
+                <button class="social-btn" aria-label="Поделиться">📤</button>
+                <button class="social-btn" aria-label="Сохранить">💾</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
